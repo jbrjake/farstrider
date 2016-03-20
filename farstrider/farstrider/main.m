@@ -12,15 +12,11 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        LocationController *locator = [[LocationController alloc] init];
-        
-        SensorController *sensor = [[SensorController alloc] init];
-        sensor.delegate = locator; 
-        
+        TrackerController *tracker = [[TrackerController alloc] init];
+
         [[NSRunLoop currentRunLoop] run];
         
-        locator = nil;
-        sensor = nil;
+        tracker = nil;
 
     }
     return 0;

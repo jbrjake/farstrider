@@ -13,6 +13,7 @@
 		74BFE5D51C9BB991001560A7 /* SensorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D41C9BB991001560A7 /* SensorController.swift */; };
 		74BFE5D71C9BBC96001560A7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D61C9BBC96001560A7 /* LocationController.swift */; };
 		74BFE5D91C9BBD7D001560A7 /* EventRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */; };
+		74E0DDD41C9F14F300944647 /* TrackerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DDD31C9F14F300944647 /* TrackerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		74BFE5D41C9BB991001560A7 /* SensorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorController.swift; sourceTree = "<group>"; };
 		74BFE5D61C9BBC96001560A7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRecorder.swift; sourceTree = "<group>"; };
+		74E0DDD31C9F14F300944647 /* TrackerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				74BFE5C61C9BB1C6001560A7 /* main.m */,
+				74E0DDD31C9F14F300944647 /* TrackerController.swift */,
 				74BFE5D61C9BBC96001560A7 /* LocationController.swift */,
 				74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */,
 				74BFE5D41C9BB991001560A7 /* SensorController.swift */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BFE5C71C9BB1C6001560A7 /* main.m in Sources */,
+				74E0DDD41C9F14F300944647 /* TrackerController.swift in Sources */,
 				74BFE5D71C9BBC96001560A7 /* LocationController.swift in Sources */,
 				74BFE5D91C9BBD7D001560A7 /* EventRecorder.swift in Sources */,
 				74BFE5D51C9BB991001560A7 /* SensorController.swift in Sources */,
@@ -291,6 +295,7 @@
 				74BFE5CC1C9BB1C6001560A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

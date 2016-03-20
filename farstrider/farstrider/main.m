@@ -7,12 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <farstrider-Swift.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        NSLog(@"Running");
+        LocationController *locator = [[LocationController alloc] init];
         
+        SensorController *sensor = [[SensorController alloc] init];
+        sensor.delegate = locator; 
+        
+        [[NSRunLoop currentRunLoop] run];
+        
+        locator = nil;
+        sensor = nil;
+
     }
     return 0;
 }

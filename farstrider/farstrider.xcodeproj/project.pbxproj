@@ -10,6 +10,9 @@
 		74BFE5C71C9BB1C6001560A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5C61C9BB1C6001560A7 /* main.m */; };
 		74BFE5CD1C9BB479001560A7 /* farstrider in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BFE5C31C9BB1C6001560A7 /* farstrider */; };
 		74BFE5D11C9BB60B001560A7 /* farstrider-agent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */; };
+		74BFE5D51C9BB991001560A7 /* SensorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D41C9BB991001560A7 /* SensorController.swift */; };
+		74BFE5D71C9BBC96001560A7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D61C9BBC96001560A7 /* LocationController.swift */; };
+		74BFE5D91C9BBD7D001560A7 /* EventRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +42,10 @@
 		74BFE5C31C9BB1C6001560A7 /* farstrider */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = farstrider; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BFE5C61C9BB1C6001560A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "farstrider-agent.plist"; sourceTree = "<group>"; };
+		74BFE5D31C9BB991001560A7 /* farstrider-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "farstrider-Bridging-Header.h"; sourceTree = "<group>"; };
+		74BFE5D41C9BB991001560A7 /* SensorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorController.swift; sourceTree = "<group>"; };
+		74BFE5D61C9BBC96001560A7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				74BFE5C61C9BB1C6001560A7 /* main.m */,
+				74BFE5D61C9BBC96001560A7 /* LocationController.swift */,
+				74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */,
+				74BFE5D41C9BB991001560A7 /* SensorController.swift */,
 				74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */,
+				74BFE5D31C9BB991001560A7 /* farstrider-Bridging-Header.h */,
 			);
 			path = farstrider;
 			sourceTree = "<group>";
@@ -152,6 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BFE5C71C9BB1C6001560A7 /* main.m in Sources */,
+				74BFE5D71C9BBC96001560A7 /* LocationController.swift in Sources */,
+				74BFE5D91C9BBD7D001560A7 /* EventRecorder.swift in Sources */,
+				74BFE5D51C9BB991001560A7 /* SensorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +254,21 @@
 		74BFE5CB1C9BB1C6001560A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "farstrider/farstrider-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		74BFE5CC1C9BB1C6001560A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "farstrider/farstrider-Bridging-Header.h";
 			};
 			name = Release;
 		};

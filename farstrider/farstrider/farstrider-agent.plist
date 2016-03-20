@@ -6,7 +6,7 @@
 	<string>us.ubiquit.farstrider</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/farstrider</string>
+		<string>/usr/local/bin/farstrider-agent</string>
 	</array>
 	<key>KeepAlive</key>
 	<true/>

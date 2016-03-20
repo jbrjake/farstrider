@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74BFE5C71C9BB1C6001560A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5C61C9BB1C6001560A7 /* main.m */; };
-		74BFE5CD1C9BB479001560A7 /* farstrider-agent in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BFE5C31C9BB1C6001560A7 /* farstrider-agent */; };
-		74BFE5D11C9BB60B001560A7 /* farstrider-agent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */; };
 		74E0DDDD1C9F166900944647 /* FarstriderTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E0DDDC1C9F166900944647 /* FarstriderTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E0DDE41C9F166900944647 /* FarstriderTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */; };
 		74E0DDE91C9F166900944647 /* FarstriderTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DDE81C9F166900944647 /* FarstriderTrackerTests.swift */; };
@@ -17,7 +14,13 @@
 		74E0DDF31C9F168100944647 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D61C9BBC96001560A7 /* LocationController.swift */; };
 		74E0DDF41C9F168400944647 /* EventRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */; };
 		74E0DDF51C9F168800944647 /* SensorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5D41C9BB991001560A7 /* SensorController.swift */; };
-		74E0DDF81C9F16C200944647 /* FarstriderTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */; };
+		74E0DE121C9F1CC200944647 /* farstriderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE111C9F1CC200944647 /* farstriderTests.swift */; };
+		74E0DE1D1C9F1EA100944647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BFE5C61C9BB1C6001560A7 /* main.m */; };
+		74E0DE1F1C9F1F2100944647 /* FarstriderTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */; };
+		74E0DE201C9F1F2100944647 /* FarstriderTracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74E0DE231C9F1FB200944647 /* farstrider-agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E0DDFF1C9F1CC200944647 /* farstrider-agent.app */; };
+		74E0DE271C9F229700944647 /* farstrider-agent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74E0DE261C9F229700944647 /* farstrider-agent.plist */; };
+		74E0DE291C9F235C00944647 /* farstrider-agent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E0DE261C9F229700944647 /* farstrider-agent.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,14 @@
 			remoteGlobalIDString = 74E0DDD91C9F166900944647;
 			remoteInfo = FarstriderTracker;
 		};
-		74E0DDF61C9F16BC00944647 /* PBXContainerItemProxy */ = {
+		74E0DE0E1C9F1CC200944647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74BFE5BB1C9BB1C6001560A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E0DDFE1C9F1CC200944647;
+			remoteInfo = farstrider;
+		};
+		74E0DE1A1C9F1E9100944647 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 74BFE5BB1C9BB1C6001560A7 /* Project object */;
 			proxyType = 1;
@@ -38,33 +48,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		74BFE5C11C9BB1C6001560A7 /* CopyFiles */ = {
+		74E0DE211C9F1F2100944647 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				74E0DE201C9F1F2100944647 /* FarstriderTracker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E0DE221C9F1F9A00944647 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
 			dstPath = /usr/local/bin;
 			dstSubfolderSpec = 0;
 			files = (
-				74BFE5CD1C9BB479001560A7 /* farstrider-agent in CopyFiles */,
+				74E0DE231C9F1FB200944647 /* farstrider-agent.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74BFE5D01C9BB5DC001560A7 /* CopyFiles */ = {
+		74E0DE281C9F22EF00944647 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "~/Library/LaunchAgents";
 			dstSubfolderSpec = 0;
 			files = (
-				74BFE5D11C9BB60B001560A7 /* farstrider-agent.plist in CopyFiles */,
+				74E0DE291C9F235C00944647 /* farstrider-agent.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		74BFE5C31C9BB1C6001560A7 /* farstrider-agent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "farstrider-agent"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BFE5C61C9BB1C6001560A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "farstrider-agent.plist"; sourceTree = "<group>"; };
-		74BFE5D31C9BB991001560A7 /* farstrider-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "farstrider-Bridging-Header.h"; sourceTree = "<group>"; };
 		74BFE5D41C9BB991001560A7 /* SensorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorController.swift; path = ../farstrider/SensorController.swift; sourceTree = "<group>"; };
 		74BFE5D61C9BBC96001560A7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationController.swift; path = ../farstrider/LocationController.swift; sourceTree = "<group>"; };
 		74BFE5D81C9BBD7D001560A7 /* EventRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventRecorder.swift; path = ../farstrider/EventRecorder.swift; sourceTree = "<group>"; };
@@ -75,17 +93,15 @@
 		74E0DDE31C9F166900944647 /* FarstriderTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarstriderTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E0DDE81C9F166900944647 /* FarstriderTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarstriderTrackerTests.swift; sourceTree = "<group>"; };
 		74E0DDEA1C9F166900944647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E0DDFF1C9F1CC200944647 /* farstrider-agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "farstrider-agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E0DE081C9F1CC200944647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E0DE0D1C9F1CC200944647 /* farstriderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = farstriderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E0DE111C9F1CC200944647 /* farstriderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farstriderTests.swift; sourceTree = "<group>"; };
+		74E0DE131C9F1CC200944647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E0DE261C9F229700944647 /* farstrider-agent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "farstrider-agent.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		74BFE5C01C9BB1C6001560A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74E0DDF81C9F16C200944647 /* FarstriderTracker.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74E0DDD61C9F166900944647 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,15 +117,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74E0DDFC1C9F1CC200944647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E0DE1F1C9F1F2100944647 /* FarstriderTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E0DE0A1C9F1CC200944647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		74BFE5BA1C9BB1C6001560A7 = {
 			isa = PBXGroup;
 			children = (
-				74BFE5C51C9BB1C6001560A7 /* farstrider-agent */,
+				74E0DE001C9F1CC200944647 /* farstrider-agent */,
 				74E0DDDB1C9F166900944647 /* FarstriderTracker */,
 				74E0DDE71C9F166900944647 /* FarstriderTrackerTests */,
+				74E0DE101C9F1CC200944647 /* farstriderTests */,
 				74BFE5C41C9BB1C6001560A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,22 +149,12 @@
 		74BFE5C41C9BB1C6001560A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74BFE5C31C9BB1C6001560A7 /* farstrider-agent */,
 				74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */,
 				74E0DDE31C9F166900944647 /* FarstriderTrackerTests.xctest */,
+				74E0DDFF1C9F1CC200944647 /* farstrider-agent.app */,
+				74E0DE0D1C9F1CC200944647 /* farstriderTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		74BFE5C51C9BB1C6001560A7 /* farstrider-agent */ = {
-			isa = PBXGroup;
-			children = (
-				74BFE5C61C9BB1C6001560A7 /* main.m */,
-				74BFE5CF1C9BB53B001560A7 /* farstrider-agent.plist */,
-				74BFE5D31C9BB991001560A7 /* farstrider-Bridging-Header.h */,
-			);
-			name = "farstrider-agent";
-			path = farstrider;
 			sourceTree = "<group>";
 		};
 		74E0DDDB1C9F166900944647 /* FarstriderTracker */ = {
@@ -157,6 +179,26 @@
 			path = FarstriderTrackerTests;
 			sourceTree = "<group>";
 		};
+		74E0DE001C9F1CC200944647 /* farstrider-agent */ = {
+			isa = PBXGroup;
+			children = (
+				74BFE5C61C9BB1C6001560A7 /* main.m */,
+				74E0DE081C9F1CC200944647 /* Info.plist */,
+				74E0DE261C9F229700944647 /* farstrider-agent.plist */,
+			);
+			name = "farstrider-agent";
+			path = farstrider;
+			sourceTree = "<group>";
+		};
+		74E0DE101C9F1CC200944647 /* farstriderTests */ = {
+			isa = PBXGroup;
+			children = (
+				74E0DE111C9F1CC200944647 /* farstriderTests.swift */,
+				74E0DE131C9F1CC200944647 /* Info.plist */,
+			);
+			path = farstriderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -171,26 +213,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		74BFE5C21C9BB1C6001560A7 /* farstrider-agent */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74BFE5CA1C9BB1C6001560A7 /* Build configuration list for PBXNativeTarget "farstrider-agent" */;
-			buildPhases = (
-				74BFE5BF1C9BB1C6001560A7 /* Sources */,
-				74BFE5C01C9BB1C6001560A7 /* Frameworks */,
-				74BFE5C11C9BB1C6001560A7 /* CopyFiles */,
-				74BFE5D01C9BB5DC001560A7 /* CopyFiles */,
-				74BFE5D21C9BB62A001560A7 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				74E0DDF71C9F16BC00944647 /* PBXTargetDependency */,
-			);
-			name = "farstrider-agent";
-			productName = farstrider;
-			productReference = 74BFE5C31C9BB1C6001560A7 /* farstrider-agent */;
-			productType = "com.apple.product-type.tool";
-		};
 		74E0DDD91C9F166900944647 /* FarstriderTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74E0DDEB1C9F166900944647 /* Build configuration list for PBXNativeTarget "FarstriderTracker" */;
@@ -227,6 +249,45 @@
 			productReference = 74E0DDE31C9F166900944647 /* FarstriderTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		74E0DDFE1C9F1CC200944647 /* farstrider-agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E0DE141C9F1CC200944647 /* Build configuration list for PBXNativeTarget "farstrider-agent" */;
+			buildPhases = (
+				74E0DDFB1C9F1CC200944647 /* Sources */,
+				74E0DDFC1C9F1CC200944647 /* Frameworks */,
+				74E0DDFD1C9F1CC200944647 /* Resources */,
+				74E0DE211C9F1F2100944647 /* Embed Frameworks */,
+				74E0DE221C9F1F9A00944647 /* CopyFiles */,
+				74E0DE281C9F22EF00944647 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E0DE1B1C9F1E9100944647 /* PBXTargetDependency */,
+			);
+			name = "farstrider-agent";
+			productName = farstrider;
+			productReference = 74E0DDFF1C9F1CC200944647 /* farstrider-agent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74E0DE0C1C9F1CC200944647 /* farstriderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E0DE171C9F1CC200944647 /* Build configuration list for PBXNativeTarget "farstriderTests" */;
+			buildPhases = (
+				74E0DE091C9F1CC200944647 /* Sources */,
+				74E0DE0A1C9F1CC200944647 /* Frameworks */,
+				74E0DE0B1C9F1CC200944647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E0DE0F1C9F1CC200944647 /* PBXTargetDependency */,
+			);
+			name = farstriderTests;
+			productName = farstriderTests;
+			productReference = 74E0DE0D1C9F1CC200944647 /* farstriderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,14 +298,24 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jonathon Rubin";
 				TargetAttributes = {
-					74BFE5C21C9BB1C6001560A7 = {
-						CreatedOnToolsVersion = 7.2.1;
-					};
 					74E0DDD91C9F166900944647 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 					74E0DDE21C9F166900944647 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					74E0DDFE1C9F1CC200944647 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S6YRFNV658;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+						};
+					};
+					74E0DE0C1C9F1CC200944647 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 74E0DDFE1C9F1CC200944647;
 					};
 				};
 			};
@@ -254,15 +325,17 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 74BFE5BA1C9BB1C6001560A7;
 			productRefGroup = 74BFE5C41C9BB1C6001560A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74BFE5C21C9BB1C6001560A7 /* farstrider-agent */,
 				74E0DDD91C9F166900944647 /* FarstriderTracker */,
 				74E0DDE21C9F166900944647 /* FarstriderTrackerTests */,
+				74E0DDFE1C9F1CC200944647 /* farstrider-agent */,
+				74E0DE0C1C9F1CC200944647 /* farstriderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,33 +355,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74E0DDFD1C9F1CC200944647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E0DE271C9F229700944647 /* farstrider-agent.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E0DE0B1C9F1CC200944647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		74BFE5D21C9BB62A001560A7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "launchct unload ~/Library/LaunchAgents/farstrider-agent.plist\nlaunchctl load ~/Library/LaunchAgents/farstrider-agent.plist";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		74BFE5BF1C9BB1C6001560A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74BFE5C71C9BB1C6001560A7 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74E0DDD51C9F166900944647 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +392,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74E0DDFB1C9F1CC200944647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E0DE1D1C9F1EA100944647 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E0DE091C9F1CC200944647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E0DE121C9F1CC200944647 /* farstriderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -336,10 +416,15 @@
 			target = 74E0DDD91C9F166900944647 /* FarstriderTracker */;
 			targetProxy = 74E0DDE51C9F166900944647 /* PBXContainerItemProxy */;
 		};
-		74E0DDF71C9F16BC00944647 /* PBXTargetDependency */ = {
+		74E0DE0F1C9F1CC200944647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E0DDFE1C9F1CC200944647 /* farstrider-agent */;
+			targetProxy = 74E0DE0E1C9F1CC200944647 /* PBXContainerItemProxy */;
+		};
+		74E0DE1B1C9F1E9100944647 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 74E0DDD91C9F166900944647 /* FarstriderTracker */;
-			targetProxy = 74E0DDF61C9F16BC00944647 /* PBXContainerItemProxy */;
+			targetProxy = 74E0DE1A1C9F1E9100944647 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,27 +508,6 @@
 			};
 			name = Release;
 		};
-		74BFE5CB1C9BB1C6001560A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "farstrider/farstrider-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		74BFE5CC1C9BB1C6001560A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "farstrider/farstrider-Bridging-Header.h";
-			};
-			name = Release;
-		};
 		74E0DDEC1C9F166900944647 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -512,6 +576,61 @@
 			};
 			name = Release;
 		};
+		74E0DE151C9F1CC200944647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = farstrider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.farstrider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74E0DE161C9F1CC200944647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = farstrider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.farstrider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		74E0DE181C9F1CC200944647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = farstriderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.farstriderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farstrider.app/Contents/MacOS/farstrider";
+			};
+			name = Debug;
+		};
+		74E0DE191C9F1CC200944647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = farstriderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.farstriderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farstrider.app/Contents/MacOS/farstrider";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,15 +639,6 @@
 			buildConfigurations = (
 				74BFE5C81C9BB1C6001560A7 /* Debug */,
 				74BFE5C91C9BB1C6001560A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		74BFE5CA1C9BB1C6001560A7 /* Build configuration list for PBXNativeTarget "farstrider-agent" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74BFE5CB1C9BB1C6001560A7 /* Debug */,
-				74BFE5CC1C9BB1C6001560A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -546,6 +656,22 @@
 			buildConfigurations = (
 				74E0DDEF1C9F166900944647 /* Debug */,
 				74E0DDF01C9F166900944647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74E0DE141C9F1CC200944647 /* Build configuration list for PBXNativeTarget "farstrider-agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E0DE151C9F1CC200944647 /* Debug */,
+				74E0DE161C9F1CC200944647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74E0DE171C9F1CC200944647 /* Build configuration list for PBXNativeTarget "farstriderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E0DE181C9F1CC200944647 /* Debug */,
+				74E0DE191C9F1CC200944647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>us.ubiquit.farstrider</string>
+	<string>us.ubiquit.farstrider-agent</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/farstrider-agent</string>
+		<string>/usr/local/bin/farstrider-agent.app/Contents/MacOS/farstrider-agent</string>
 	</array>
 	<key>KeepAlive</key>
 	<true/>

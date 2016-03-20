@@ -20,7 +20,6 @@
 		74E0DE231C9F1FB200944647 /* farstrider-agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E0DDFF1C9F1CC200944647 /* farstrider-agent.app */; };
 		74E0DE271C9F229700944647 /* farstrider-agent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74E0DE261C9F229700944647 /* farstrider-agent.plist */; };
 		74E0DE291C9F235C00944647 /* farstrider-agent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74E0DE261C9F229700944647 /* farstrider-agent.plist */; };
-		74E0DE2B1C9F25B700944647 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74E0DE081C9F1CC200944647 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -308,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E0DE2B1C9F25B700944647 /* Info.plist in Resources */,
 				74E0DE271C9F229700944647 /* farstrider-agent.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

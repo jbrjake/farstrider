@@ -12,7 +12,7 @@ import Foundation
 // 1) Determining initial location
 // 2) Sensing when to re-check location
 // 3) Passing location events for recording
-class TrackerController :NSObject {
+public class TrackerController :NSObject {
     let locator = LocationController()
     let sensor = SensorController()
     

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <farstrider-Swift.h>
+#import <FarstriderTracker/FarstriderTracker.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

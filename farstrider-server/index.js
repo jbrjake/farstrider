@@ -31,8 +31,8 @@ app.use(koa_mongoose({
 }))
 
 app.use(route.get('/', index));
+app.use(route.get('/locations', getLocations))
 app.use(route.post('/api/v1/location/add/', addLocation))
-
 
 function *index() {
 	this.body = "<h1>farstrider-server</h1>";
@@ -51,6 +51,12 @@ function *addLocation() {
 	yield location.saveQ()
 	console.log("Added location")
 	this.body = 'OK'
+}
+
+function *getLocations() {
+	console.log("hit get locations")
+	var locations = yield Location.find()
+	this.body = locations
 }
 
 console.log("listening")

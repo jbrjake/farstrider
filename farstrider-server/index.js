@@ -18,7 +18,7 @@ var app = koa()
 app.use(koa_mongoose({
 	user: '',
 	pass: '',
-	host: '127.0.0.1',
+	host: 'mongo',
 	port: 27017,
 	database :'locations',
 	db: {

@@ -1,32 +1,19 @@
 var koa = require('koa')
 var route = require('koa-route')
 var parse = require('co-body')
-
 var mongoose = require('mongoose')
+
+mongoose.connect('mongodb://mongo:27017/locations')
+
 var Schema = mongoose.schema;
 var locationSchema = mongoose.Schema({
 	timestamp :Date,
 	latitude :Number,
 	longitude :Number
 })
-
-var koa_mongoose = require('koa-mongoose')
 var Location = mongoose.model('Location', locationSchema)
 
 var app = koa()
-
-app.use(koa_mongoose({
-	host: 'mongo',
-	port: '27017',
-	database :'locations',
-	db: {
-		native_parser: true
-	},
-	server: {
-		poolSize: 5
-	}
-	
-}))
 
 app.use(route.get('/', index));
 app.use(route.get('/locations', getLocations))
@@ -46,7 +33,7 @@ function *addLocation() {
 		longitude: body.longitude
 	})
 	console.log("Storing in Mongo: +", location)
-	yield location.saveQ()
+	yield location.save()
 	console.log("Added location")
 	this.body = 'OK'
 }

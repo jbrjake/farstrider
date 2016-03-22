@@ -1,10 +1,9 @@
-var koa = require('koa')
-var route = require('koa-route')
-var parse = require('co-body')
-var mongoose = require('mongoose')
+var koa 		= require('koa')
+var route 		= require('koa-route')
+var parse 		= require('co-body')
+var mongoose	= require('mongoose')
 
 mongoose.connect('mongodb://mongo:27017/locations')
-
 var Schema = mongoose.schema;
 var locationSchema = mongoose.Schema({
 	timestamp :Date,
@@ -14,17 +13,15 @@ var locationSchema = mongoose.Schema({
 var Location = mongoose.model('Location', locationSchema)
 
 var app = koa()
-
-app.use(route.get('/', index));
-app.use(route.get('/locations', getLocations))
-app.use(route.post('/api/v1/location/add/', addLocation))
+app.use(route.get(	'/', index));
+app.use(route.get(	'/api/v1/locations', getLocations))
+app.use(route.post(	'/api/v1/location/add', addLocation))
 
 function *index() {
 	this.body = "<h1>farstrider-server</h1>";
 }
 
 function *addLocation() {
-	console.log("Hit addLocation: " + this)
 	var body = yield parse.json(this)
 	console.log("Adding location: " + JSON.stringify(body))
 	var location = new Location({
@@ -32,17 +29,13 @@ function *addLocation() {
 		latitude: body.latitude,
 		longitude: body.longitude
 	})
-	console.log("Storing in Mongo: +", location)
 	yield location.save()
-	console.log("Added location")
 	this.body = 'OK'
 }
 
 function *getLocations() {
-	console.log("hit get locations")
 	var locations = yield Location.find()
 	this.body = locations
 }
 
-console.log("listening")
 app.listen(8080);

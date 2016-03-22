@@ -16,10 +16,8 @@ var Location = mongoose.model('Location', locationSchema)
 var app = koa()
 
 app.use(koa_mongoose({
-	user: '',
-	pass: '',
 	host: 'mongo',
-	port: 27017,
+	port: '27017',
 	database :'locations',
 	db: {
 		native_parser: true

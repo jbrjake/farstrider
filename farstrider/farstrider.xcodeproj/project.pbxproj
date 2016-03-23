@@ -28,6 +28,7 @@
 		74E0DE6B1CA2388F00944647 /* farstrider_network_service.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE6A1CA2388F00944647 /* farstrider_network_service.m */; };
 		74E0DE6D1CA2388F00944647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE6C1CA2388F00944647 /* main.m */; };
 		74E0DE711CA2388F00944647 /* farstrider-network-service.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 74E0DE661CA2388F00944647 /* farstrider-network-service.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74E0DE771CA239A500944647 /* FarstriderNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE761CA239A500944647 /* FarstriderNetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +52,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 74E0DE441CA2387400944647;
 			remoteInfo = FarstriderNetwork;
-		};
-		74E0DE521CA2387400944647 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74BFE5BB1C9BB1C6001560A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74E0DDFE1C9F1CC200944647;
-			remoteInfo = "farstrider-agent";
 		};
 		74E0DE581CA2387400944647 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -148,6 +142,7 @@
 		74E0DE6A1CA2388F00944647 /* farstrider_network_service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = farstrider_network_service.m; sourceTree = "<group>"; };
 		74E0DE6C1CA2388F00944647 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74E0DE6E1CA2388F00944647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E0DE761CA239A500944647 /* FarstriderNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarstriderNetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				74E0DE471CA2387400944647 /* FarstriderNetwork.h */,
+				74E0DE761CA239A500944647 /* FarstriderNetworkController.swift */,
 				74E0DE491CA2387400944647 /* Info.plist */,
 				74E0DE671CA2388F00944647 /* farstrider-network-service */,
 			);
@@ -402,7 +398,6 @@
 			);
 			dependencies = (
 				74E0DE511CA2387400944647 /* PBXTargetDependency */,
-				74E0DE531CA2387400944647 /* PBXTargetDependency */,
 			);
 			name = FarstriderNetworkTests;
 			productName = FarstriderNetworkTests;
@@ -457,7 +452,6 @@
 					};
 					74E0DE4D1CA2387400944647 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 74E0DDFE1C9F1CC200944647;
 					};
 					74E0DE651CA2388F00944647 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -478,12 +472,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				74E0DDFE1C9F1CC200944647 /* farstrider-agent */,
 				74E0DDD91C9F166900944647 /* FarstriderTracker */,
 				74E0DDE21C9F166900944647 /* FarstriderTrackerTests */,
-				74E0DDFE1C9F1CC200944647 /* farstrider-agent */,
 				74E0DE441CA2387400944647 /* FarstriderNetwork */,
-				74E0DE4D1CA2387400944647 /* FarstriderNetworkTests */,
 				74E0DE651CA2388F00944647 /* farstrider-network-service */,
+				74E0DE4D1CA2387400944647 /* FarstriderNetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -566,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E0DE771CA239A500944647 /* FarstriderNetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,11 +598,6 @@
 			isa = PBXTargetDependency;
 			target = 74E0DE441CA2387400944647 /* FarstriderNetwork */;
 			targetProxy = 74E0DE501CA2387400944647 /* PBXContainerItemProxy */;
-		};
-		74E0DE531CA2387400944647 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 74E0DDFE1C9F1CC200944647 /* farstrider-agent */;
-			targetProxy = 74E0DE521CA2387400944647 /* PBXContainerItemProxy */;
 		};
 		74E0DE591CA2387400944647 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -801,6 +791,7 @@
 		74E0DE5C1CA2387400944647 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -823,6 +814,7 @@
 		74E0DE5D1CA2387400944647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -850,7 +842,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.FarstriderNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farstrider-agent.app/Contents/MacOS/farstrider-agent";
 			};
 			name = Debug;
 		};
@@ -862,7 +853,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ubiquit.us.FarstriderNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farstrider-agent.app/Contents/MacOS/farstrider-agent";
 			};
 			name = Release;
 		};
@@ -934,6 +924,7 @@
 				74E0DE5D1CA2387400944647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74E0DE611CA2387400944647 /* Build configuration list for PBXNativeTarget "FarstriderNetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -942,6 +933,7 @@
 				74E0DE5F1CA2387400944647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74E0DE721CA2388F00944647 /* Build configuration list for PBXNativeTarget "farstrider-network-service" */ = {
 			isa = XCConfigurationList;
@@ -950,6 +942,7 @@
 				74E0DE741CA2388F00944647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

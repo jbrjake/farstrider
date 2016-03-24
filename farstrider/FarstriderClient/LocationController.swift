@@ -9,10 +9,21 @@
 import Foundation
 import FarstriderNetwork
 import CoreLocation
+import MapKit
 
-struct Location {
+class Location :NSObject, MKAnnotation {
+    
     let date :NSDate
-    let coordinates :CLLocationCoordinate2D
+    let coordinate :CLLocationCoordinate2D
+
+    init(
+        withCoordinate coordinate :CLLocationCoordinate2D, 
+        onDate date :NSDate
+    ) {        
+        self.date = date
+        self.coordinate = coordinate
+    }
+    
 }
 
 class LocationController {
@@ -51,9 +62,9 @@ class LocationController {
                 continue
             }
             
-            let coordinates = CLLocationCoordinate2D(latitude: rawLat, longitude: rawLon)
+            let coordinate = CLLocationCoordinate2D(latitude: rawLat, longitude: rawLon)
             
-            let location = Location(date: date, coordinates: coordinates)
+            let location = Location(withCoordinate: coordinate, onDate: date)
             self.locations.append(location)
         }
         

@@ -56,26 +56,25 @@ extension ViewController :MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        if let location = annotation as? Location {
-            
-            let identifier = "Pin"
-            var pinView :MKPinAnnotationView
-            
-            if let dequeuedAnnotation = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
-                dequeuedAnnotation.annotation = location
-                pinView = dequeuedAnnotation
-            }
-            else {
-                pinView = MKPinAnnotationView(annotation: location, reuseIdentifier: identifier)
-            }
-            
-            return pinView
-        }
+        guard let 
+            location = annotation as? Location 
         else {
             // Someone's associating the wrong annotation type :/
             return nil
         }
         
+        let identifier = "Pin"
+        var pinView :MKPinAnnotationView
+        
+        if let dequeuedAnnotation = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
+            dequeuedAnnotation.annotation = location
+            pinView = dequeuedAnnotation
+        }
+        else {
+            pinView = MKPinAnnotationView(annotation: location, reuseIdentifier: identifier)
+        }
+        
+        return pinView        
     }
     
 }

@@ -31,8 +31,7 @@ class LocationController {
     let network :FarstriderNetworkControllerProtocol
     let formatter = NSDateFormatter()
 
-    var locations = [Location]()
-    
+    private var locations = [Location]()
     
     init(withNetwork network :FarstriderNetworkControllerProtocol) {
         self.network = network
@@ -46,6 +45,10 @@ class LocationController {
             }
             callback()
         }
+    }
+    
+    func annotations() -> [Location] {
+        return self.locations
     }
     
     private func parseRawLocations(rawLocations :NSArray) {

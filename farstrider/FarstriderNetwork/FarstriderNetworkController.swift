@@ -8,24 +8,24 @@
 
 import Foundation
 
-public protocol FarstriderNetworkControllerProtocol {
+@objc public protocol FarstriderNetworkControllerProtocol {
     
     func 
     addLocation( 
         atTime timestamp :NSDate, 
         withLongitude lon :Float, 
         andLatitude lat :Float, 
-        andCallback callback :(() -> Void) 
+        reply callback :(() -> Void) 
     )
     
     func 
     getLocations( 
-        withCallback callback :((NSArray?)-> Void) 
+        reply callback :((NSArray?)-> Void) 
     )
     
 }
 
-public class FarstriderNetworkController :FarstriderNetworkControllerProtocol {
+public class FarstriderNetworkController :NSObject, FarstriderNetworkControllerProtocol {
 
     let baseURL = "http://api.briansmom.com/api/v1/"
     
@@ -34,7 +34,7 @@ public class FarstriderNetworkController :FarstriderNetworkControllerProtocol {
         atTime timestamp :NSDate, 
         withLongitude lon :Float, 
         andLatitude lat :Float, 
-        andCallback callback :(()->Void) 
+        reply callback :(()->Void) 
     ) {
         
         let jsonDict :[String:AnyObject] = [
@@ -68,7 +68,7 @@ public class FarstriderNetworkController :FarstriderNetworkControllerProtocol {
     
     public func 
     getLocations( 
-        withCallback callback :((NSArray?)->Void) 
+        reply callback :((NSArray?)->Void) 
     ) {
         if let getURL = NSURL(string: baseURL + "locations") {
             let request = NSURLRequest(URL: getURL)

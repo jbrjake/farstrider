@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FarstriderClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkm-kG-Rzi">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-Kx-hm9">
+                                <rect key="frame" x="507" y="28" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mDz-Sv-ltx">
+                                <rect key="frame" x="282" y="291" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zCW-Kx-hm9" secondAttribute="trailing" constant="20" id="A5U-F6-QZi"/>
+                            <constraint firstItem="nkm-kG-Rzi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nol-bU-65f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nkm-kG-Rzi" secondAttribute="bottom" id="Pgx-RL-cnD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nkm-kG-Rzi" secondAttribute="trailing" id="U5k-iE-9Lo"/>
+                            <constraint firstItem="mDz-Sv-ltx" firstAttribute="centerY" secondItem="nkm-kG-Rzi" secondAttribute="centerY" id="bwb-z6-xBe"/>
+                            <constraint firstItem="zCW-Kx-hm9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eur-Xu-Qpk"/>
+                            <constraint firstItem="mDz-Sv-ltx" firstAttribute="centerX" secondItem="nkm-kG-Rzi" secondAttribute="centerX" id="hp1-uB-HJn"/>
+                            <constraint firstItem="nkm-kG-Rzi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ig6-or-JEZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="nkm-kG-Rzi" id="NFD-dG-RYF"/>
+                        <outlet property="refreshButton" destination="zCW-Kx-hm9" id="6po-ef-QqF"/>
+                        <outlet property="spinner" destination="mDz-Sv-ltx" id="1ER-mr-7O4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

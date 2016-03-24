@@ -7,30 +7,43 @@
 //
 
 import UIKit
+import MapKit
 import FarstriderNetwork
 
 class ViewController: UIViewController {
 
     var locations = LocationController(withNetwork: FarstriderNetworkController())
     
+    @IBOutlet var mapView :MKMapView!
+    @IBOutlet var refreshButton :UIButton!
+    @IBOutlet var spinner :UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func viewWillAppear(animated: Bool) {
+        self.refreshButton.addTarget(self, action: "refreshData", forControlEvents: .TouchUpInside)
+        
         self.refreshData()
     }
     
     func refreshData() {
+        self.refreshButton.enabled = false
+        self.refreshButton.hidden = true
+        self.spinner.startAnimating()
+        
         self.locations.loadLocations { () -> Void in
             self.redisplayPins()
-        }        
+            
+            self.refreshButton.enabled = true
+            self.refreshButton.hidden = false
+            self.spinner.stopAnimating()
+        }
     }
     
     func redisplayPins() {

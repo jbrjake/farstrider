@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FarstriderNetwork
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewWillAppear(animated: Bool) {
+        let network = FarstriderNetworkController()
+        network.getLocations { (locations) -> Void in
+            print("got locations: \(locations)")
+        }
+    }
 }
 

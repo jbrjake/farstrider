@@ -24,6 +24,7 @@
 		7423F98A1CA432C700081AF9 /* FarstriderNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7423F9741CA432C700081AF9 /* FarstriderNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7423F9921CA4331700081AF9 /* FarstriderNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE761CA239A500944647 /* FarstriderNetworkController.swift */; };
 		7423F9931CA4331D00081AF9 /* FarstriderNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DE551CA2387400944647 /* FarstriderNetworkTests.swift */; };
+		7423F9951CA4700300081AF9 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423F9941CA4700300081AF9 /* LocationController.swift */; };
 		74E0DDDD1C9F166900944647 /* FarstriderTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E0DDDC1C9F166900944647 /* FarstriderTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E0DDE41C9F166900944647 /* FarstriderTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0DDDA1C9F166900944647 /* FarstriderTracker.framework */; };
 		74E0DDE91C9F166900944647 /* FarstriderTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0DDE81C9F166900944647 /* FarstriderTrackerTests.swift */; };
@@ -201,6 +202,7 @@
 		7423F97D1CA432C700081AF9 /* FarstriderNetwork_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarstriderNetwork_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7423F9841CA432C700081AF9 /* FarstriderNetwork_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarstriderNetwork_iOSTests.swift; sourceTree = "<group>"; };
 		7423F9861CA432C700081AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7423F9941CA4700300081AF9 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		74BFE5C61C9BB1C6001560A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "farstrider-agent/main.m"; sourceTree = SOURCE_ROOT; };
 		74BFE5D41C9BB991001560A7 /* SensorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorController.swift; sourceTree = "<group>"; };
 		74BFE5D61C9BBC96001560A7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				7423F9431CA430D500081AF9 /* AppDelegate.swift */,
 				7423F9451CA430D500081AF9 /* ViewController.swift */,
+				7423F9941CA4700300081AF9 /* LocationController.swift */,
 				7423F9471CA430D500081AF9 /* Main.storyboard */,
 				7423F94A1CA430D500081AF9 /* Assets.xcassets */,
 				7423F94C1CA430D500081AF9 /* LaunchScreen.storyboard */,
@@ -826,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7423F9461CA430D500081AF9 /* ViewController.swift in Sources */,
+				7423F9951CA4700300081AF9 /* LocationController.swift in Sources */,
 				7423F9441CA430D500081AF9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

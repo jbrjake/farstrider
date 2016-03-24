@@ -11,6 +11,8 @@ import FarstriderNetwork
 
 class ViewController: UIViewController {
 
+    var locations = LocationController(withNetwork: FarstriderNetworkController())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,10 +24,18 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        let network = FarstriderNetworkController()
-        network.getLocations { (locations) -> Void in
-            print("got locations: \(locations)")
-        }
+        self.refreshData()
     }
+    
+    func refreshData() {
+        self.locations.loadLocations { () -> Void in
+            self.redisplayPins()
+        }        
+    }
+    
+    func redisplayPins() {
+        
+    }
+    
 }
 

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {        
         self.refreshButton.addTarget(self, action: "refreshData", forControlEvents: .TouchUpInside)
         
         self.refreshData()
@@ -38,11 +38,11 @@ class ViewController: UIViewController {
         self.spinner.startAnimating()
         
         self.locations.loadLocations { () -> Void in
-            self.redisplayPins()
-            
             self.refreshButton.enabled = true
             self.refreshButton.hidden = false
             self.spinner.stopAnimating()
+
+            self.redisplayPins()
         }
     }
     

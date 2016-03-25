@@ -40,11 +40,13 @@ class ViewController: UIViewController {
         self.spinner.startAnimating()
         
         self.locations.loadLocations { () -> Void in
-            self.refreshButton.enabled = true
-            self.refreshButton.hidden = false
-            self.spinner.stopAnimating()
-
-            self.redisplayPins()
+            dispatch_async(dispatch_get_main_queue()) {
+                self.refreshButton.enabled = true
+                self.refreshButton.hidden = false
+                self.spinner.stopAnimating()
+                
+                self.redisplayPins()
+            }
         }
     }
     

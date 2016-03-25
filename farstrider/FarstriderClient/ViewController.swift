@@ -51,9 +51,11 @@ class ViewController: UIViewController {
     // Display the pins, but put a delay between each one
     func redisplayPins() {
         
-        var timeDelay = Int64(1000000000) // 1 second
+        let startTime = dispatch_time(DISPATCH_TIME_NOW, 0)
+        var timeDelay = Int64(250000000) // 0.25 seconds
+
         for location in self.locations.annotations()  {
-            let timeOffset = dispatch_time(DISPATCH_TIME_NOW, timeDelay)
+            let timeOffset = dispatch_time(startTime, timeDelay)
             
             dispatch_after(timeOffset, dispatch_get_main_queue(), { () -> Void in
                 self.mapView.addAnnotation(location)

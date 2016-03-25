@@ -26,9 +26,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func viewWillAppear(animated: Bool) {        
+    override func viewWillAppear(animated: Bool) {
         self.refreshButton.addTarget(self, action: "refreshData", forControlEvents: .TouchUpInside)
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.refreshData()
     }
     

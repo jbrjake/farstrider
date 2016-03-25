@@ -1,7 +1,7 @@
 Farstrider
 ----------
 
-This app uses a Mac OS X background service to share a laptop's location with a remote backend.
+This app uses a Mac OS X background service to share a laptop's location with a remote backend and display the location history in an iPhone app.
 
 It's a proof of concept to demonstrate an understanding of the underlying technology, and to explore some architectural designs for application structure.
 
@@ -40,3 +40,13 @@ A bare bones Node.js server to receive logging events from the client, store the
 The Node app and the DB run on separate Docker containers, stored in Docker Hub and linked together with Docker Compose. They live on an AWS server.
 
 It has a very simple API with two endpoints for adding a location and getting all locations.
+
+
+Farstrider Client
+=================
+
+A simple iOS app that displays the location data tracked by the Mac agent and stored by the server.
+
+It displays an MKMapView, and drops pins on every location the Mac has visited.
+
+It will link an iOS build of the Farstrider Network framework to retrieve the locations.

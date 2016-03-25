@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         self.refreshButton.hidden = true
         self.spinner.startAnimating()
         
+        self.mapView.removeAnnotations(self.locations.annotations())
+        
         self.locations.loadLocations { () -> Void in
             dispatch_async(dispatch_get_main_queue()) {
                 self.refreshButton.enabled = true

@@ -196,7 +196,6 @@
 		7423F9541CA430D500081AF9 /* FarstriderClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarstriderClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7423F9581CA430D600081AF9 /* FarstriderClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarstriderClientTests.swift; sourceTree = "<group>"; };
 		7423F95A1CA430D600081AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7423F96E1CA4329E00081AF9 /* FarstriderNetwork copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FarstriderNetwork copy-Info.plist"; path = "/Users/jonr/Documents/farstrider/farstrider/FarstriderNetwork copy-Info.plist"; sourceTree = "<absolute>"; };
 		7423F9741CA432C700081AF9 /* FarstriderNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FarstriderNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7423F9761CA432C700081AF9 /* FarstriderNetwork-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FarstriderNetwork-iOS.h"; sourceTree = "<group>"; };
 		7423F9781CA432C700081AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -368,7 +367,6 @@
 				7423F9751CA432C700081AF9 /* FarstriderNetwork-iOS */,
 				7423F9831CA432C700081AF9 /* FarstriderNetwork-iOSTests */,
 				74BFE5C41C9BB1C6001560A7 /* Products */,
-				7423F96E1CA4329E00081AF9 /* FarstriderNetwork copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1415,6 +1413,7 @@
 				7423F95C1CA430D600081AF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7423F9601CA430D600081AF9 /* Build configuration list for PBXNativeTarget "FarstriderClientTests" */ = {
 			isa = XCConfigurationList;
@@ -1423,6 +1422,7 @@
 				7423F95E1CA430D600081AF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7423F98B1CA432C700081AF9 /* Build configuration list for PBXNativeTarget "FarstriderNetwork_iOS" */ = {
 			isa = XCConfigurationList;
@@ -1431,6 +1431,7 @@
 				7423F98D1CA432C700081AF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7423F98F1CA432C700081AF9 /* Build configuration list for PBXNativeTarget "FarstriderNetwork_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1439,6 +1440,7 @@
 				7423F9911CA432C700081AF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74BFE5BE1C9BB1C6001560A7 /* Build configuration list for PBXProject "farstrider" */ = {
 			isa = XCConfigurationList;
